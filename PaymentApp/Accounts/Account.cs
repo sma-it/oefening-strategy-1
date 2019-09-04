@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PaymentApp
 {
-    class Account
+    abstract class Account
     {
         private string name;
         public string Name { get => name; }
@@ -15,13 +15,12 @@ namespace PaymentApp
         private float saldo = 100;
         public float Saldo { get => saldo; }
 
-        private PaymentMethods.PaymentMethod paymentMethod;
-        public PaymentMethods.PaymentMethod PaymentMethod { get => paymentMethod; }
+        protected PaymentMethods.IPaymentMethod paymentMethod;
+        public PaymentMethods.IPaymentMethod PaymentMethod { get => paymentMethod; }
 
         public Account(string name)
         {
             this.name = name;
-            paymentMethod = new PaymentMethods.PaymentMethod();
         }
 
         public bool BuyItem()

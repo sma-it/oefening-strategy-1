@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace PaymentApp.PaymentMethods
-{
-    class PaymentMethod
+{ 
+    class VisaPayment : IPaymentMethod
     {
         private string name = "Visa";
         public string Name { get => name; }

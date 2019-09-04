@@ -4,9 +4,9 @@ namespace PaymentApp
 {
     class Program
     {
-        static Account account1 = new Account("Forlong the Fat");
-        static Account account2 = new Account("Samwise Gamgee");
-        static Account account3 = new Account("Tom Bombadil");
+        static Account account1 = new Accounts.VisaAccount("Forlong the Fat");
+        static Account account2 = new Accounts.PayPalAccount("Samwise Gamgee");
+        static Account account3 = new Accounts.NoAccount("Tom Bombadil");
 
         static Account selected = null;
 
